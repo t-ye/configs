@@ -57,8 +57,8 @@ function! FileHeading()
           let s:line=line(".")
           call setline (s:line,   "/*")
           call append  (s:line,   " * Filename: " .expand("%"))
-          call append  (s:line+1, " * Author: TODO")
-          call append  (s:line+2, " * Userid: cs30xTODO")
+          call append  (s:line+1, " * Author: Thurman Ye")
+          call append  (s:line+2, " * Userid: cs30xqy")
           call append  (s:line+3, " * Description: TODO")
           call append  (s:line+4, " * Date: " .strftime("%b %d %Y"))
           call append  (s:line+5, " * Sources of Help: TODO")
@@ -91,4 +91,9 @@ augroup vimrc_autocmds
 autocmd BufEnter,WinEnter * call matchadd('OverLength', '\%>80v.\+', -1)
 augroup END
 
+" inoremap <Esc> <Esc>:w<CR>
+inoremap <C-h> <left>
+inoremap <C-j> <down>
+inoremap <C-k> <up>
+inoremap <C-l> <right>
 
