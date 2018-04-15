@@ -61,7 +61,9 @@ alias ls="ls --color=auto"
 
 export PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;83m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;81m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;226m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 
-tmux new-session -A -s main
+if [[ $HOSTNAME != pi*]] ; then
+	tmux new-session -A -s main
+fi
 
 # tmux reopen
 alias tmuxr="tmux new-session -A -s main"
