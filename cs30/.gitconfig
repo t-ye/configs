@@ -1,0 +1,8 @@
+[user]
+	name = t-ye
+	email = lightningleaf0@gmail.com
+
+[alias]
+	fpush = "!git add . && git commit -a --allow-empty-message -m '' && git push origin"
+[push]
+	default = simple
