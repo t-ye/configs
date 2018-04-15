@@ -64,6 +64,23 @@ function! FileHeading()
           call append  (s:line+5, " * Sources of Help: TODO")
           call append  (s:line+6, " */")
           unlet s:line
- endfunction
-  
- imap <F9> <ESC>mz:execute FileHeading()<CR>
+endfunction
+   
+function! AssemblyFunctionHeading()
+          let s:line=line(".")
+          call setline (s:line,   "/*")
+          call append  (s:line,   " * Function Name: TODO")
+          call append  (s:line+1, " * Function Prototype: TODO")
+          call append  (s:line+2, " * Description: TODO")
+          call append  (s:line+3, " * Side Effects: TODO")
+          call append  (s:line+4, " * Error Conditions: TODO")
+          call append  (s:line+5, " * Return Value: TODO")
+          call append  (s:line+6, " * ")
+          call append  (s:line+7, " * Registers used: TODO")
+          call append  (s:line+8, " */")
+          unlet s:line
+endfunction
+
+imap <F9> <ESC>mz:execute FileHeading()<CR>
+imap <F10> <ESC>:call AssemblyFunctionHeading()<CR>
+
