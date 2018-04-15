@@ -42,7 +42,7 @@ fi
 # For example:  set path = ( $path ${HOME}/bin )
 # [ -r .acms.debug ] && echo EXITING .bashrc >&2
 
-export CURRENT_PA=0
+export CURRENT_PA=1
 if [[ $HOSTNAME != pi* ]]; then
 	redirect="pi-cluster.ucsd.edu"
 	read -r -p "ssh into ${redirect}? (Y/n): " response
@@ -60,3 +60,8 @@ alias backup="~/backup.sh"
 alias ls="ls --color=auto"
 
 export PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;83m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;81m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;226m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+
+tmux new-session -A -s main
+
+# tmux reopen
+alias tmuxr="tmux new-session -A -s main"

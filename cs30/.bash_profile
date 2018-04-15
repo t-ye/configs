@@ -26,26 +26,3 @@ if [ -s ~/.bashrc ]; then
   source ~/.bashrc
 fi
 
-export CURRENT_PA=1
-if [[ $HOSTNAME != pi* ]]; then
-	redirect="pi-cluster.ucsd.edu"
-	read -r -p "ssh into ${redirect}? (Y/n): " response
-	response=${response,,} # tolower
-	if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
-	   ssh $redirect
-	fi
-fi
-
-cd ~/pa/pa${CURRENT_PA}
-
-alias sshpi="ssh pi-cluster.ucsd.edu"
-alias backup="~/backup.sh"
-
-alias ls="ls --color=auto"
-
-export PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;83m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;81m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;226m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
-
-tmux new-session -A -s main
-
-# tmux reopen
-alias tmuxr="tmux new-session -A -s main"

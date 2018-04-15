@@ -53,7 +53,7 @@ map <C-K> :prev <CR>
 map <F10> <Esc>setlocal spell spelllang=en_us<CR>
 map <F11> <Esc>setlocal nospell<CR>
 
-function FileHeading()
+function! FileHeading()
           let s:line=line(".")
           call setline (s:line,   "/*")
           call append  (s:line,   " * Filename: " .expand("%"))
