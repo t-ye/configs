@@ -84,3 +84,11 @@ endfunction
 imap <F9> <ESC>mz:execute FileHeading()<CR>
 imap <F10> <ESC>:call AssemblyFunctionHeading()<CR>
 
+highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
+
+augroup vimrc_autocmds
+	autocmd!
+autocmd BufEnter,WinEnter * call matchadd('OverLength', '\%>80v.\+', -1)
+augroup END
+
+
