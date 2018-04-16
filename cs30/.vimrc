@@ -39,6 +39,14 @@ set background=dark
 " Show syntax
 syntax on
 
+" https://coderwall.com/p/sdhfug/vim-swap-backup-and-undo-files
+" Keep backup files from polluting the project directory
+set undodir=~/.vim/.undo/
+
+set backupdir=~/.vim/.backup/
+
+set directory=~/.vim/.swp/
+
 " This is my prefered colorscheme, feel free to choose another colorscheme 
 " (You can try out other colors by doing :colorscheme in command mode, then 
 " press space, then tab.  Keep pressing tab to cycle through all the colorscheme
