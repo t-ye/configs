@@ -63,6 +63,9 @@ if [[ $HOSTNAME != pi* ]]; then
 fi
 
 cd ~/pa/pa${CURRENT_PA}
+if [ -a aliases ]; then
+	source aliases
+fi
 
 alias sshpi="ssh pi-cluster.ucsd.edu"
 export PATH=$PATH":~/bin"
@@ -70,3 +73,4 @@ export PATH=$PATH":~/bin"
 alias ls="ls --color=auto"
 
 export PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;83m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;81m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;226m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+
