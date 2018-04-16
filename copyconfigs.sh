@@ -17,7 +17,7 @@ cd $SCRIPT_PATH
 mkdir -p $CONFIG_ACCOUNT
 
 while read config_file ; do
-	cp ~/$config_file $CONFIG_ACCOUNT/$config_file
+	cp -r ~/$config_file $CONFIG_ACCOUNT/$config_file
 done <$CONFIG_ACCOUNT/config_list
 
 git fpush

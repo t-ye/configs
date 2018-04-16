@@ -3,6 +3,6 @@
 	email = lightningleaf0@gmail.com
 
 [alias]
-	fpush = "!git add . && git commit -a --allow-empty-message -m '' && git push origin"
+	fpush = "!git add . && git commit -a --allow-empty-message -m '' && git push"
 [push]
 	default = simple
