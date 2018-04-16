@@ -81,6 +81,21 @@ function! AssemblyFunctionHeading()
           unlet s:line
 endfunction
 
+function! RaspberryPiDirectives()
+          let s:line=line(".")
+          call setline (s:line,   "@ Raspberry Pi directives")
+          call append  (s:line,   "	.cpu	cortex-a53")
+          call append  (s:line+1, "	.syntax	unified")
+          call append  (s:line+2, "	.equ	FP_OFFSET, 4")
+          call append  (s:line+3, "")
+          call append  (s:line+4, "	.global	isEven")
+          call append  (s:line+5, "")
+          call append  (s:line+6, "	.text")
+          call append  (s:line+7, "	.align 2")
+          call append  (s:line+8, "")
+          unlet s:line
+endfunction
+
 imap <F9> <ESC>mz:execute FileHeading()<CR>
 imap <F10> <ESC>:call AssemblyFunctionHeading()<CR>
 

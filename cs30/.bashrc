@@ -42,10 +42,20 @@ fi
 # For example:  set path = ( $path ${HOME}/bin )
 # [ -r .acms.debug ] && echo EXITING .bashrc >&2
 
+# tmux reopen
+alias tmuxr="tmux new-session -A -s main"
+
 export CURRENT_PA=1
 if [[ $HOSTNAME != pi* ]]; then
 	redirect="pi-cluster.ucsd.edu"
-	read -r -p "ssh into ${redirect}? (Y/n): " response
+	if ! { [ "$TERM" = "screen" ] || [ -n "$TMUX" ]; } then
+		tmuxr
+	fi
+	# -r: backslash read literally
+	# -p: prompt
+	# -n1: read only one character (including newline)
+	read -n1 -r -p "ssh into ${redirect}? (Y/n): " response
+	echo
 	response=${response,,} # tolower
 	if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
 	   ssh $redirect
@@ -55,15 +65,8 @@ fi
 cd ~/pa/pa${CURRENT_PA}
 
 alias sshpi="ssh pi-cluster.ucsd.edu"
-alias backup="~/backup.sh"
+export PATH=$PATH":~/bin"
 
 alias ls="ls --color=auto"
 
 export PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;83m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;81m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;226m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
-
-if [[ $HOSTNAME != pi* ]]; then
-	tmux new-session -A -s main
-fi
-
-# tmux reopen
-alias tmuxr="tmux new-session -A -s main"
