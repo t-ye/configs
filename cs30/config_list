@@ -4,3 +4,4 @@
 .tmux.conf
 .vimrc
 scripts/
+.gitignore
