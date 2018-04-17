@@ -74,7 +74,7 @@ function! FileHeading()
           unlet s:line
 endfunction
    
-function! AssemblyFunctionHeading()
+function! AssemblyRoutineHeading()
           let s:line=line(".")
           call setline (s:line,   "/*")
           call append  (s:line,   " * Function Name: TODO")
@@ -89,23 +89,59 @@ function! AssemblyFunctionHeading()
           unlet s:line
 endfunction
 
-function! RaspberryPiDirectives()
+
+function! AssemblyRoutineHeading()
           let s:line=line(".")
-          call setline (s:line,   "@ Raspberry Pi directives")
-          call append  (s:line,   "	.cpu	cortex-a53")
-          call append  (s:line+1, "	.syntax	unified")
-          call append  (s:line+2, "	.equ	FP_OFFSET, 4")
-          call append  (s:line+3, "")
-          call append  (s:line+4, "	.global	isEven")
-          call append  (s:line+5, "")
-          call append  (s:line+6, "	.text")
-          call append  (s:line+7, "	.align 2")
-          call append  (s:line+8, "")
+          call setline (s:line,   "/*")
+          call append  (s:line,   " * Function Name: TODO")
+          call append  (s:line+1, " * Function Prototype: TODO")
+          call append  (s:line+2, " * Description: TODO")
+          call append  (s:line+3, " * Parameters: TODO")
+          call append  (s:line+4, " * Side Effects: TODO")
+          call append  (s:line+5, " * Error Conditions: TODO")
+	  call append  (s:line+6, " * Return Value: TODO")
+	  call append  (s:line+7, " * ")
+	  call append  (s:line+8, " * Registers used: TODO")
+	  call append  (s:line+9, " * 	<register> - <use> -- <description>")
+	  call append  (s:line+10, " * ")
+	  call append  (s:line+11, " * Local variables: TODO")
+	  call append  (s:line+12, " * 	<name> - <fp offset> -- <description>")
+	  call append  (s:line+13, " */")
+          unlet s:line
+endfunction	
+
+function! FunctionHeading()
+          let s:line=line(".")
+          call setline (s:line,   "/*")
+          call append  (s:line,   " * Function Name: TODO")
+          call append  (s:line+1, " * Function Prototype: TODO")
+          call append  (s:line+2, " * Description: TODO")
+          call append  (s:line+3, " * Side Effects: TODO")
+          call append  (s:line+4, " * Error Conditions: TODO")
+          call append  (s:line+5, " * Return Value: TODO")
+          call append  (s:line+6, " */")
           unlet s:line
 endfunction
 
-imap <F9> <ESC>mz:execute FileHeading()<CR>
-imap <F10> <ESC>:call AssemblyFunctionHeading()<CR>
+function! RaspberryPiDirectives()
+          let s:line=line(".")
+          call setline (s:line,   "@ Raspberry Pi directives")
+          call append  (s:line,   "	.cpu	cortex-a53	@ Version of our Pis")
+          call append  (s:line+1, "	.syntax	unified		@ Modern ARM syntax")
+          call append  (s:line+2, "	.equ	FP_OFFSET, 4	@ Offset to set fp to base of saved regs.")
+          call append  (s:line+3, "")
+          call append  (s:line+4, "	.global TODO		@ Allow this label to be linked to other files")
+          call append  (s:line+5, "")
+          call append  (s:line+6, "	.text			@ Switch to text segment")
+          call append  (s:line+7, "	.align 2		@ Align onevenly divisible by 4 byte address")
+	  call append  (s:line+8, "				@ .align n: 2^n determines alignment")
+          call append  (s:line+9, "")
+          unlet s:line
+endfunction
+
+imap <F9> <ESC>:execute FileHeading()<CR>
+imap <F10> <ESC>:call AssemblyRoutineHeading()<CR>
+imap <F12> <ESC>:call FunctionHeading()<CR>
 
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
 
@@ -119,4 +155,11 @@ inoremap <C-h> <left>
 inoremap <C-j> <down>
 inoremap <C-k> <up>
 inoremap <C-l> <right>
+
+" Uncomment the following to have Vim jump to the last position when 
+" reopening a file
+if has("autocmd")
+	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+	\| exe "normal! g'\"" | endif
+endif
 

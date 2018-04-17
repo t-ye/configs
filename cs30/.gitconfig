@@ -6,3 +6,5 @@
 	fpush = "!git add . && git commit -a --allow-empty-message -m '' && git push"
 [push]
 	default = simple
+[core]
+	excludesfile = ~/.gitignore
