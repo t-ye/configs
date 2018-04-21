@@ -25,13 +25,22 @@ mkdir -p $CONFIG_ACCOUNT
 
 # If config list doesn't exist
 if [ ! -e $CONFIG_ACCOUNT/config_list ] ; then
-	echo "Config list not found for $CONFIG_ACCOUNT"
+	echo "Config list not found for $CONFIG_ACCOUNT."
 	read -p "Create a config list for $CONFIG_ACCOUNT? (Y/n) " -n 1 -r
+	echo
 
 	if ! [[ "$REPLY" =~ ^(Y|y)$ ]] ; then
 		echo "Exiting."	
 		exit 0
 	fi
+	touch $CONFIG_ACCOUNT/config_list
+fi
+
+# Check file size
+if [ ! -s $CONFIG_ACCOUNT/config_list ] ; then
+	echo "Config list for $CONFIG_ACCOUNT empty."
+	echo "Redirecting stdin to $CONFIG_ACCOUNT/config_list (C-D to stop)"
+	cat >> $CONFIG_ACCOUNT/config_list
 fi
 
 while read config_file ; do
