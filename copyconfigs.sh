@@ -1,3 +1,8 @@
+if [ $# != 1 ] ; then
+	echo "Usage: copyconfigs.sh <account name>"
+	exit 1
+fi
+
 CONFIG_ACCOUNT=$1
 
 # $0 - path to call the script
@@ -11,10 +16,23 @@ SCRIPT=$(readlink -f $0)
 # Absolute path this script is in. /home/user/bin
 SCRIPT_PATH=`dirname $SCRIPT`
 
+# Set the working directory of this script 
+# to the script's location
 cd $SCRIPT_PATH
 
 # Make the directory if it isn't already there
 mkdir -p $CONFIG_ACCOUNT
+
+# If config list doesn't exist
+if [ ! -e $CONFIG_ACCOUNT/config_list ] ; then
+	echo "Config list not found for $CONFIG_ACCOUNT"
+	read -p "Create a config list for $CONFIG_ACCOUNT? (Y/n) " -n 1 -r
+
+	if ! [[ "$REPLY" =~ ^(Y|y)$ ]] ; then
+		echo "Exiting."	
+		exit 0
+	fi
+fi
 
 while read config_file ; do
 	cp -r ~/$config_file $CONFIG_ACCOUNT/
