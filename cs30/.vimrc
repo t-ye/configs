@@ -163,3 +163,5 @@ if has("autocmd")
 	\| exe "normal! g'\"" | endif
 endif
 
+" Automatically remove trailiing whitespace on each save
+autocmd BufWritePre * %s/\s\+$//e
