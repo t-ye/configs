@@ -3,23 +3,23 @@
 # [ -r .acms.debug ] && echo ENTERED .bashrc >&2
 public=${public:-/public}
 
-# Your .bashrc file is processed each time a new, non-login 
+# Your .bashrc file is processed each time a new, non-login
 # Bourne-Again SHell (bash) is initialized.
 # Changes made here will have no effect on the login bash shell;
-# such changes should be made in .bash_profile. 
-# 
-# All the usual setup is done by the following line.  Any additions 
-# you make should come after it. 
+# such changes should be made in .bash_profile.
 #
-# You may add commands to the end of this file as needed. 
-# 
+# All the usual setup is done by the following line.  Any additions
+# you make should come after it.
+#
+# You may add commands to the end of this file as needed.
+#
 
 # echo processing bash specific shell initialization
 # [ -r $public/bashrc.adjunct ] && . $public/bashrc.adjunct
 
 # When this file was first placed in your home directory, a
-# pre-existing bashrc file may have been moved to a file named 
-# "${HOME}/.bashrc.old". Check the commands in that file be 
+# pre-existing bashrc file may have been moved to a file named
+# "${HOME}/.bashrc.old". Check the commands in that file be
 # sure they are still needed.
 
 if [ -r ${HOME}/.bashrc.old ]

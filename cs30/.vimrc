@@ -47,11 +47,12 @@ set backupdir=~/.vim/.backup/
 
 set directory=~/.vim/.swp/
 
-" This is my prefered colorscheme, feel free to choose another colorscheme 
-" (You can try out other colors by doing :colorscheme in command mode, then 
+" This is my prefered colorscheme, feel free to choose another colorscheme
+" (You can try out other colors by doing :colorscheme in command mode, then
 " press space, then tab.  Keep pressing tab to cycle through all the colorscheme
 " options).
-:colors desert
+colors industry
+hi Comment ctermfg=Cyan
 
 " For switching between many opened file by using ctrl+l or ctrl+h
 map <C-J> :next <CR>
@@ -73,7 +74,7 @@ function! FileHeading()
           call append  (s:line+6, " */")
           unlet s:line
 endfunction
-   
+
 function! AssemblyRoutineHeading()
           let s:line=line(".")
           call setline (s:line,   "/*")
@@ -108,7 +109,7 @@ function! AssemblyRoutineHeading()
 	  call append  (s:line+12, " * 	<name> - <fp offset> -- <description>")
 	  call append  (s:line+13, " */")
           unlet s:line
-endfunction	
+endfunction
 
 function! FunctionHeading()
           let s:line=line(".")
@@ -156,7 +157,7 @@ inoremap <C-j> <down>
 inoremap <C-k> <up>
 inoremap <C-l> <right>
 
-" Uncomment the following to have Vim jump to the last position when 
+" Uncomment the following to have Vim jump to the last position when
 " reopening a file
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -165,3 +166,8 @@ endif
 
 " Automatically remove trailiing whitespace on each save
 autocmd BufWritePre * %s/\s\+$//e
+
+" Output the current syntax group
+nnoremap <F12> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
+
+
