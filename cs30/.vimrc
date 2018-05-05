@@ -51,8 +51,8 @@ set directory=~/.vim/.swp/
 " (You can try out other colors by doing :colorscheme in command mode, then
 " press space, then tab.  Keep pressing tab to cycle through all the colorscheme
 " options).
-colors industry
-hi Comment ctermfg=Cyan
+colors gruvbox
+" hi Comment ctermfg=Cyan
 
 " For switching between many opened file by using ctrl+l or ctrl+h
 map <C-J> :next <CR>
@@ -170,4 +170,17 @@ autocmd BufWritePre * %s/\s\+$//e
 " Output the current syntax group
 nnoremap <F12> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
 
+" Don't let vim give the background a different color.
+hi Normal ctermbg=None
+hi NonText ctermbg=None
 
+" hi StatusLine ctermfg=black ctermbg=white cterm=bold
+" hi StatusLineNC ctermfg=black ctermbg=white cterm=bold
+
+hi StatusLine   ctermfg=red ctermbg=black cterm=bold gui=bold,italic
+hi StatusLineNC ctermfg=grey ctermbg=black cterm=none gui=none
+
+hi VertSplit cterm=none ctermfg=red
+
+hi ControlFlow ctermfg=red
+" match ControlFlow "/fi\|while\|for\|switch\|if\|else\|else if"

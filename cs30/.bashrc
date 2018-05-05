@@ -35,6 +35,12 @@ then
 	echo "----------------------------------------------"
 fi
 
+
+# https://superuser.com/questions/690735/can-i-tell-if-im-in-an-scp-session-in-my-bashrc
+if [ -z "$PS1" ]; then
+	return
+fi
+
 # CAUTION: if you choose to make adjustments to PATH,
 # it is usually advisable to *add* to the existing PATH
 # rather than resetting PATH completely.  By adding, there
@@ -43,18 +49,20 @@ fi
 # [ -r .acms.debug ] && echo EXITING .bashrc >&2
 
 # tmux reopen
+
 alias tmuxr="tmux new-session -A -s main"
 
-export CURRENT_PA=1
+export CURRENT_PA=2
 if [[ $HOSTNAME != pi* ]]; then
-	redirect="pi-cluster.ucsd.edu"
+
 	if ! { [ "$TERM" = "screen" ] || [ -n "$TMUX" ]; } then
 		tmuxr
 	fi
 	# -r: backslash read literally
 	# -p: prompt
 	# -n1: read only one character (including newline)
-	read -n1 -r -p "ssh into ${redirect}? (Y/n): " response
+	redirect="pi-cluster.ucsd.edu"
+	read -t1 -n1 -r -p "ssh into ${redirect}? (Y/n): " response
 	echo
 	response=${response,,} # tolower
 	if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
@@ -62,10 +70,12 @@ if [[ $HOSTNAME != pi* ]]; then
 	fi
 fi
 
+
 cd ~/pa/pa${CURRENT_PA}
 if [ -a aliases ]; then
 	source aliases
 fi
+
 
 alias sshpi="ssh pi-cluster.ucsd.edu"
 export PATH=$PATH":~/bin"
