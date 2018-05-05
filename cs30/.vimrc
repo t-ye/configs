@@ -52,6 +52,9 @@ set directory=~/.vim/.swp/
 " press space, then tab.  Keep pressing tab to cycle through all the colorscheme
 " options).
 colors gruvbox
+hi PreProc ctermfg=Red
+"hi SpecialKey ctermfg=LightGreen
+"hi NonText ctermfg=LightGreen
 " hi Comment ctermfg=Cyan
 
 " For switching between many opened file by using ctrl+l or ctrl+h

@@ -50,7 +50,7 @@ fi
 
 # tmux reopen
 
-alias tmuxr="tmux new-session -A -s main"
+LS_COLORS=$LS_COLORS:'di=1;96:ln=4;96:ex=1;95:mi=1;91:*.c=93' ; export LS_COLORS alias tmuxr="tmux new-session -A -s main"
 
 export CURRENT_PA=2
 if [[ $HOSTNAME != pi* ]]; then
@@ -90,3 +90,4 @@ EXECIGNORE=*.o
 
 # Don't save repetitions in command history.
 export HISTCONTROL=ignoredups
+
