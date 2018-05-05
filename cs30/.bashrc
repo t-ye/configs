@@ -50,7 +50,7 @@ fi
 
 # tmux reopen
 
-LS_COLORS=$LS_COLORS:'di=1;96:ln=4;96:ex=1;95:mi=1;91:*.c=93' ; export LS_COLORS alias tmuxr="tmux new-session -A -s main"
+LS_COLORS=$LS_COLORS:'di=1;96:ln=4;96:ex=1;95:mi=1;31:*.c=93:*.s=92:*.h=91' ; export LS_COLORS alias tmuxr="tmux new-session -A -s main"
 
 export CURRENT_PA=2
 if [[ $HOSTNAME != pi* ]]; then
