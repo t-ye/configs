@@ -26,10 +26,12 @@ set bg=light
 set nonu                        " no line numbers
 scriptencoding utf-8
 set encoding=utf-8
-" Expand tabs in C files to spaces
-au BufRead,BufNewFile *.{c,h,java} set expandtab
+" DON'T Expand tabs in C files to spaces
+" au BufRead,BufNewFile *.{c,h,java} set expandtab
+au BufRead,BufNewFile *.{c,h,java} set noexpandtab
 au BufRead,BufNewFile *.{c,h,java} set shiftwidth=2
 au BufRead,BufNewFile *.{c,h,java} set tabstop=2
+au BufRead,BufNewFile *.{c,h,java} %retab!
 
 " Do not expand tabs in assembly file.  Make them 8 chars wide.
 au BufRead,BufNewFile *.s set noexpandtab

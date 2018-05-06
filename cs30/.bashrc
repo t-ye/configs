@@ -56,7 +56,7 @@ export CURRENT_PA=2
 if [[ $HOSTNAME != pi* ]]; then
 
 	if ! { [ "$TERM" = "screen" ] || [ -n "$TMUX" ]; } then
-		tmuxr
+		tmux attach
 	fi
 	# -r: backslash read literally
 	# -p: prompt
