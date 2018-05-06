@@ -6,4 +6,5 @@
 scripts/
 .gitignore
 .gdbinit
-.vim/
+.vim/syntax
+.vim/colors
