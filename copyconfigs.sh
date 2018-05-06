@@ -43,8 +43,18 @@ if [ ! -s $CONFIG_ACCOUNT/config_list ] ; then
 	cat >> $CONFIG_ACCOUNT/config_list
 fi
 
+
+# Copy the files!
+# Preserve the directory structure as indicated in config_file.
 while read config_file ; do
 	cp --parents --recursive ~/$config_file $CONFIG_ACCOUNT/
+	if [ -d ~/$config_file ]; then
+		mkdir --parents $CONFIG_ACCOUNT/$config_file/
+		rm --recursive --force $CONFIG_ACCOUNT/$config_file
+	fi
+	mv $CONFIG_ACCOUNT/$HOME/$config_file \
+	   $CONFIG_ACCOUNT/$config_file
 done <$CONFIG_ACCOUNT/config_list
 
+rm --recursive --dir $CONFIG_ACCOUNT/home
 git fpush
