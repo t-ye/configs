@@ -16,7 +16,7 @@ SCRIPT=$(readlink -f $0)
 # Absolute path this script is in. /home/user/bin
 SCRIPT_PATH=`dirname $SCRIPT`
 
-# Set the working directory of this script 
+# Set the working directory of this script
 # to the script's location
 cd $SCRIPT_PATH
 
@@ -30,7 +30,7 @@ if [ ! -e $CONFIG_ACCOUNT/config_list ] ; then
 	echo
 
 	if ! [[ "$REPLY" =~ ^(Y|y)$ ]] ; then
-		echo "Exiting."	
+		echo "Exiting."
 		exit 0
 	fi
 	touch $CONFIG_ACCOUNT/config_list
