@@ -21,7 +21,7 @@ SCRIPT_PATH=`dirname $SCRIPT`
 cd $SCRIPT_PATH
 
 # Make the directory if it isn't already there
-mkdir -p $CONFIG_ACCOUNT
+mkdir --parents $CONFIG_ACCOUNT
 
 # If config list doesn't exist
 if [ ! -e $CONFIG_ACCOUNT/config_list ] ; then
@@ -44,7 +44,7 @@ if [ ! -s $CONFIG_ACCOUNT/config_list ] ; then
 fi
 
 while read config_file ; do
-	cp -r ~/$config_file $CONFIG_ACCOUNT/
+	cp --parents --recursive ~/$config_file $CONFIG_ACCOUNT/
 done <$CONFIG_ACCOUNT/config_list
 
 git fpush
