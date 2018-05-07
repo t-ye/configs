@@ -57,4 +57,11 @@ while read config_file ; do
 done <$CONFIG_ACCOUNT/config_list
 
 rm --recursive --dir $CONFIG_ACCOUNT/home
-git fpush
+
+
+if [[ $HOSTNAME == pi* ]]; then
+	ssh ieng6.ucsd.edu 'cd '$SCRIPT_PATH'; git fpush'
+else
+	git fpush
+fi
+
