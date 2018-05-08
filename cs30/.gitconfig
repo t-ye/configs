@@ -6,8 +6,8 @@
 	# Force push
 	nomsgcommit = commit -a --allow-empty-message -m \"\"
 	fpush = !git add . && git nomsgcommit && git push
-	makerepo = "!~/scripts/makerepo.sh"
-	acp = "!~/scripts/gitacp.sh"
+	makerepo = !~/scripts/makerepo.sh
+	acp = !~/scripts/gitacp.sh
 [push]
 	# Allow push without explicit branch & remote
 	default = simple
