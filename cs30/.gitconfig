@@ -5,7 +5,7 @@
 [alias]
 	# Force push
 	nomsgcommit = commit -a --allow-empty-message -m \"\"
-	fpush = "!git add . && git nomsgcommit && git push"
+	fpush = !git add . && git nomsgcommit && git push
 	makerepo = "!~/scripts/makerepo.sh"
 	acp = "!~/scripts/gitacp.sh"
 [push]
