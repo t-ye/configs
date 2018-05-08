@@ -12,5 +12,6 @@
 	default = simple
 [core]
 	excludesfile = ~/.gitignore
+	#editor=vim
 [github]
 	user = t-ye

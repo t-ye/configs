@@ -60,7 +60,7 @@ rm --recursive --dir $CONFIG_ACCOUNT/home
 
 
 if [[ $HOSTNAME == pi* ]]; then
-	ssh ieng6.ucsd.edu 'cd '$SCRIPT_PATH'; git fpush'
+	ssh ieng6.ucsd.edu "cd $SCRIPT_PATH; git add . ; git commit --allow-empty-message -m \'\' ; git push"
 else
 	git fpush
 fi

@@ -50,7 +50,8 @@ fi
 
 # tmux reopen
 
-LS_COLORS=$LS_COLORS:'di=1;96:ln=4;96:ex=1;95:mi=1;31:*.c=93:*.s=92:*.h=91' ; export LS_COLORS alias tmuxr="tmux new-session -A -s main"
+LS_COLORS=$LS_COLORS:'di=1;96:ln=4;96:ex=1;95:mi=1;31:*.c=93:*.s=92:*.h=91' ; export LS_COLORS
+# alias tmuxr="tmux new-session -A -s main"
 
 export CURRENT_PA=2
 if [[ $HOSTNAME != pi* ]]; then
@@ -81,6 +82,8 @@ alias sshpi="ssh pi-cluster.ucsd.edu"
 export PATH=$PATH":~/bin"
 
 alias ls="ls --color=auto"
+
+LS_COLORS=$LS_COLORS:'di=1;96:ln=4;96:ex=1;95:mi=1;31:*.c=93:*.s=92:*.h=91' ; export LS_COLORS
 
 export PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;83m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;81m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;226m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 

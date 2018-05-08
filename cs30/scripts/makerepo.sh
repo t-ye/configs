@@ -7,6 +7,7 @@
 # Grabs sensible defaults from the containing folder and `.gitconfig`.
 # Refinements welcome.
 
+git init
 # Gather constant vars
 CURRENTDIR=${PWD##*/}
 GITHUBUSER=$(git config github.user)
