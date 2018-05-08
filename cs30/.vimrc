@@ -119,10 +119,11 @@ function! FunctionHeading()
           call append  (s:line,   " * Function Name: TODO")
           call append  (s:line+1, " * Function Prototype: TODO")
           call append  (s:line+2, " * Description: TODO")
-          call append  (s:line+3, " * Side Effects: TODO")
-          call append  (s:line+4, " * Error Conditions: TODO")
-          call append  (s:line+5, " * Return Value: TODO")
-          call append  (s:line+6, " */")
+          call append  (s:line+3, " * Parameters: TODO")
+          call append  (s:line+4, " * Side Effects: TODO")
+          call append  (s:line+5, " * Error Conditions: TODO")
+          call append  (s:line+6, " * Return Value: TODO")
+          call append  (s:line+7, " */")
           unlet s:line
 endfunction
 
@@ -146,12 +147,6 @@ imap <F9> <ESC>:execute FileHeading()<CR>
 imap <F10> <ESC>:call AssemblyRoutineHeading()<CR>
 imap <F12> <ESC>:call FunctionHeading()<CR>
 
-highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
-
-augroup vimrc_autocmds
-	autocmd!
-autocmd BufEnter,WinEnter * call matchadd('OverLength', '\%>80v.\+', -1)
-augroup END
 
 " inoremap <Esc> <Esc>:w<CR>
 inoremap <C-h> <left>
@@ -170,7 +165,7 @@ endif
 autocmd BufWritePre * %s/\s\+$//e
 
 " Output the current syntax group
-nnoremap <F12> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
+" nnoremap <F12> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
 
 
 " hi StatusLine ctermfg=black ctermbg=white cterm=bold
@@ -192,3 +187,10 @@ au BufRead,BufNewFile *.{sh} hi Function ctermfg=Green
 hi Normal ctermbg=None
 hi NonText ctermbg=None
 hi VertSplit cterm=none ctermfg=red
+
+highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
+
+augroup vimrc_autocmds
+	autocmd!
+autocmd BufEnter,WinEnter * call matchadd('OverLength', '\%>80v.\+', -1)
+augroup END
