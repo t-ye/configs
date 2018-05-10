@@ -84,13 +84,13 @@ export PATH=$PATH":~/bin"
 alias ls="ls --color=auto"
 
 LS_COLORS=$LS_COLORS:'di=1;96:ln=4;96:ex=1;95:mi=1;31:*.c=93:*.s=92:*.h=91' ; export LS_COLORS
+# LS_COLORS=$LS_COLORS:'di=1;34:ln=4;34:ex=1;35:mi=1;31:*.c=33:*.s=32:*.h=31' ; export LS_COLORS
 
 export PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;83m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;81m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;226m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
-
+#export PS1="\[\e[31m\]\u\[\e[m\] \[\e[32m\]\h\[\e[m\] \[\e[34m\]\W\[\e[m\] \[\e[35m\]\\$\[\e[m\] "
 
 # Don't autocomplete on object files.
 EXECIGNORE=*.o
 
 # Don't save repetitions in command history.
 export HISTCONTROL=ignoredups
-

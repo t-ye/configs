@@ -153,6 +153,7 @@ inoremap <C-h> <left>
 inoremap <C-j> <down>
 inoremap <C-k> <up>
 inoremap <C-l> <right>
+noremap <C-c> <Esc>:x<CR>
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
@@ -178,6 +179,7 @@ autocmd BufWritePre * %s/\s\+$//e
 " Show syntax
 syntax on
 set background=dark
+" set background=light
 colorscheme gruvbox
 hi PreProc ctermfg=Red
 " Change color of function labels.
@@ -194,3 +196,7 @@ augroup vimrc_autocmds
 	autocmd!
 autocmd BufEnter,WinEnter * call matchadd('OverLength', '\%>80v.\+', -1)
 augroup END
+
+" Auto insert delimeter for multiline comments
+set formatoptions+=r
+set comments=sl:/*,mb:\ *,elx:*/
