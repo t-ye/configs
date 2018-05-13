@@ -8,6 +8,7 @@
 	fpush = !git add . && git nomsgcommit && git push
 	makerepo = !~/scripts/makerepo.sh
 	acp = !~/scripts/gitacp.sh
+	unstage = reset HEAD --
 [push]
 	# Allow push without explicit branch & remote
 	default = simple

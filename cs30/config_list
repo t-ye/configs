@@ -8,3 +8,4 @@ scripts/
 .gdbinit
 .vim/syntax
 .vim/colors
+.vim/templates

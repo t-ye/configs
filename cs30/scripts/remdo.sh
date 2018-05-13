@@ -5,5 +5,5 @@ TODO=$1
 if [[ $HOSTNAME == ieng6* ]] ; then
 	$TODO
 else
-	ssh "$IENG6" 'echo n ; '"$TODO" > /dev/null
+	ssh "$IENG6" 'echo n ; '"$TODO"
 fi

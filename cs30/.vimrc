@@ -38,6 +38,7 @@ au BufRead,BufNewFile *.s set noexpandtab
 au BufRead,BufNewFile *.s set shiftwidth=8
 au BufRead,BufNewFile *.s set tabstop=8
 
+set textwidth=80
 
 
 " https://coderwall.com/p/sdhfug/vim-swap-backup-and-undo-files
@@ -154,6 +155,7 @@ inoremap <C-j> <down>
 inoremap <C-k> <up>
 inoremap <C-l> <right>
 noremap <C-c> <Esc>:x<CR>
+noremap <C-c> <Esc>:x<CR>
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
@@ -194,12 +196,23 @@ highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
 
 augroup vimrc_autocmds
 	autocmd!
-autocmd BufEnter,WinEnter * call matchadd('OverLength', '\%>80v.\+', -1)
+	autocmd BufEnter,WinEnter * call matchadd('OverLength', '\%>80v.\+', -1)
 augroup END
 
-" Auto insert delimeter for multiline comments
-set formatoptions+=r
+" Multiline comments
 set comments=sl:/*,mb:\ *,elx:*/
+
+" Automatically insert the current comment leader after hitting <Enter>.
+set formatoptions+=r
+
+" Automatically insert the current comment leader after hitting 'o' or 'O'.
+set formatoptions+=o
+
+" join multiline // comments if possible
+set formatoptions+=j
+
+" Auto format for comments
+set formatoptions+=c
 
 " Make spacing keys work in normal mode.
 nnoremap <Space> i<Space><Right><ESC>
@@ -209,9 +222,28 @@ nnoremap <Tab> i<Tab><ESC>
 " Can increment/decrement letters
 set nrformats+=alpha
 
+" https://shapeshed.com/vim-templates/
 if has("autocmd")
 	augroup templates
 		autocmd BufNewFile *.s 0r ~/.vim/templates/template.s
 		autocmd BufNewFile *.s %s/\CFILENAME/\=expand("%:t:r")/g
+		autocmd BufNewFile *.s %s/\CDATE/\=strftime("%b %d %Y")/g
+
+		autocmd BufNewFile *.c 0r ~/.vim/templates/template.c
+		autocmd BufNewFile *.c %s/\CFILENAME/\=expand("%:t:r")/g
+		autocmd BufNewFile *.c %s/\CDATE/\=strftime("%b %d %Y")/g
 	augroup END
 endif
+
+" Use a file to store undos persistently. "
+set undofile
+set undodir=~/.vim/.vimundo
+
+" Auto-brace
+" inoremap { {<CR>}<Esc>ko<Tab>
+
+" Make Esc'ing faster
+" "set timeout timeoutlen=1000 ttimeoutlen=10
+
+" Scripts are sourced automatically.
+
