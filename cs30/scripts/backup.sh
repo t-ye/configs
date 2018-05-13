@@ -1,16 +1,13 @@
 cd ~/pa
-make clean
+echo -n 'Cleaning... '
+make clean &> /dev/null
+echo 'Done. '
+# Make backups of PAs.
 
 FILENAME=~/backup.tar.gz
-tar --exclude='*.o' --exclude='.*' -zcf $FILENAME ~/pa --exclude=pa/instructs
+tar --exclude='*.o' --exclude='.*' -zcf $FILENAME "${PA_BASEDIR}" --exclude=${INSTRUCTS_DIR}
 
-if [[ $HOSTNAME == pi* ]]; then
-	ssh ieng6.ucsd.edu "echo n ; \
-	                    echo '' | mail -a $FILENAME -s '' thye@ucsd.edu; \
-	                    scp $FILENAME lightningleaf@sdf.lonestar.org:~/cs30/"
-else
-    echo '' | mail -a $FILENAME -s '' thye@ucsd.edu
-    scp $FILENAME lightningleaf@sdf.lonestar.org:~/cs30/
-fi
 
-rm -f $FILENAME
+remdo "echo '' | mail -a $FILENAME -s '' thye@ucsd.edu"
+
+rm "$FILENAME"

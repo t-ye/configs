@@ -187,7 +187,7 @@ au BufRead,BufNewFile *.{sh} hi Function ctermfg=Green
 
 " Don't let vim give the background a different color.
 hi Normal ctermbg=None
-hi NonText ctermbg=None
+hi NonText ctermbg=None ctermfg=gray
 hi VertSplit cterm=none ctermfg=red
 
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
@@ -200,3 +200,18 @@ augroup END
 " Auto insert delimeter for multiline comments
 set formatoptions+=r
 set comments=sl:/*,mb:\ *,elx:*/
+
+" Make spacing keys work in normal mode.
+nnoremap <Space> i<Space><Right><ESC>
+nnoremap <CR> i<CR><ESC>
+nnoremap <Tab> i<Tab><ESC>
+
+" Can increment/decrement letters
+set nrformats+=alpha
+
+if has("autocmd")
+	augroup templates
+		autocmd BufNewFile *.s 0r ~/.vim/templates/template.s
+		autocmd BufNewFile *.s %s/\CFILENAME/\=expand("%:t:r")/g
+	augroup END
+endif

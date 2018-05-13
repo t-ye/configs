@@ -36,10 +36,11 @@ curl -u ${GITHUBUSER} https://api.github.com/user/repos \
 	     \"private\": true,
 	     \"has_issues\": true,
 	     \"has_downloads\": true,
-	     \"has_wiki\": false}" &> /dev/null
+	     \"has_wiki\": false}" 2> ~/makerepo_errs
 
 # Set the freshly created repo to the origin and push
 # You'll need to have added your public key to your github account
-git remote add origin git@github.com:${GITHUBUSER}/${REPONAME:-${CURRENTDIR}}.git || git remote set-url origin git@github.com:${GITHUBUSER}/${REPONAME:-${CURRENTDIR}}.git
+# git remote add origin git@github.com:${GITHUBUSER}/${REPONAME:-${CURRENTDIR}}.git
+git remote set-url origin git@github.com:${GITHUBUSER}/${REPONAME:-${CURRENTDIR}}.git
 # git remote set-url origin git@github.com:${USER:-${GITHUBUSER}}/${REPONAME:-${CURRENTDIR}}.git
-git push --set-upstream origin master
+# git push --set-upstream origin master
