@@ -9,3 +9,4 @@ scripts/
 .vim/syntax
 .vim/colors
 .vim/templates
+.vim/plugins

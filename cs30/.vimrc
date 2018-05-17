@@ -150,7 +150,8 @@ imap <F12> <ESC>:call FunctionHeading()<CR>
 
 
 " inoremap <Esc> <Esc>:w<CR>
-inoremap <C-h> <left>
+" ???
+imap <C-h> <left>
 inoremap <C-j> <down>
 inoremap <C-k> <up>
 inoremap <C-l> <right>
@@ -243,7 +244,13 @@ set undodir=~/.vim/.vimundo
 " inoremap { {<CR>}<Esc>ko<Tab>
 
 " Make Esc'ing faster
-" "set timeout timeoutlen=1000 ttimeoutlen=10
+set timeout timeoutlen=1000 ttimeoutlen=10
 
 " Scripts are sourced automatically.
 
+" Multiline function arguments
+set cino+=(0
+
+" Ctrl+s save
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <ESC>:w<CR>a

@@ -50,14 +50,15 @@ fi
 
 # tmux reopen
 
-LS_COLORS=$LS_COLORS:'di=1;96:ln=4;96:ex=1;95:mi=1;31:*.c=93:*.s=92:*.h=91' ; export LS_COLORS
+# LS_COLORS=$LS_COLORS:'di=1;96:ln=4;96:ex=1;95:mi=1;31:*.c=93:*.s=92:*.h=91' ; export LS_COLORS
 # alias tmuxr="tmux new-session -A -s main"
 
+alias tmux='tmux attach -d'
 export CURRENT_PA=3
 if [[ $HOSTNAME != pi* ]]; then
 
 	if ! { [ "$TERM" = "screen" ] || [ -n "$TMUX" ]; } then
-		tmux attach
+		tmux
 	else
 		# -r: backslash read literally
 		# -p: prompt
@@ -100,3 +101,7 @@ export HISTCONTROL=ignoredups
 export PA_BASEDIR="${HOME}/pa"
 export INSTRUCTS_DIR="${PA_BASEDIR}/instructs"
 export IENG6='ieng6.ucsd.edu'
+
+# Disable C-s from freezing the terminal.
+bind -r '\C-s'
+stty -ixon
