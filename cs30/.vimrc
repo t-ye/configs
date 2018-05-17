@@ -240,8 +240,6 @@ endif
 set undofile
 set undodir=~/.vim/.vimundo
 
-" Auto-brace
-" inoremap { {<CR>}<Esc>ko<Tab>
 
 " Make Esc'ing faster
 set timeout timeoutlen=1000 ttimeoutlen=10
@@ -253,4 +251,14 @@ set cino+=(0
 
 " Ctrl+s save
 nnoremap <C-s> :w<CR>
-inoremap <C-s> <ESC>:w<CR>a
+inoremap <C-s> <ESC>:w<CR>l
+
+" Auto-brace
+inoremap {<CR> {<CR>}<Esc>ko<Tab>
+
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+"nmap  :w           <NOP>
+"nmap :x            <NOP>

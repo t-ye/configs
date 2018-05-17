@@ -2,3 +2,7 @@
 .*.sw*
 *~
 *.out
+testnameQuest
+testparseCmd
+testpopulateNameData
+testconvertStr
