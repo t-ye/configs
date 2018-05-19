@@ -54,12 +54,12 @@ fi
 # alias tmuxr="tmux new-session -A -s main"
 
 alias tmux='tmux attach -d'
-export CURRENT_PA=3
+export CURRENT_PA='3'
 if [[ $HOSTNAME != pi* ]]; then
 
 	if ! { [ "$TERM" = "screen" ] || [ -n "$TMUX" ]; } then
 		tmux
-	else
+	elif [[ $CURRENT_PA != mt* ]] ; then
 		# -r: backslash read literally
 		# -p: prompt
 		# -n1: read only one character (including newline)
@@ -73,8 +73,13 @@ if [[ $HOSTNAME != pi* ]]; then
 	fi
 fi
 
+re='^[0-9]+$'
+if [[ $CURRENT_PA = mt* || $CURRENT_PA =~ $re ]] ; then
+	cd ~/pa/pa${CURRENT_PA}
+else
+	cd ~/pa/${CURRENT_PA}
+fi
 
-cd ~/pa/pa${CURRENT_PA}
 if [ -a aliases ]; then
 	source aliases
 fi
@@ -105,3 +110,7 @@ export IENG6='ieng6.ucsd.edu'
 # Disable C-s from freezing the terminal.
 bind -r '\C-s'
 stty -ixon
+
+# Check C syntax.
+# -c: Don't require a main function.
+alias csyn='gcc -fsyntax-only -std=c99 -c'

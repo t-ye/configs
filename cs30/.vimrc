@@ -26,12 +26,13 @@ set bg=light
 set nonu                        " no line numbers
 scriptencoding utf-8
 set encoding=utf-8
-" DON'T Expand tabs in C files to spaces
+" Expand tabs in C files to spaces
 " au BufRead,BufNewFile *.{c,h,java} set expandtab
 au BufRead,BufNewFile *.{c,h,java} set noexpandtab
 au BufRead,BufNewFile *.{c,h,java} set shiftwidth=2
 au BufRead,BufNewFile *.{c,h,java} set tabstop=2
 " au BufRead,BufNewFile *.{c,h,java} %retab!
+" args *.js | argdo retab
 
 " Do not expand tabs in assembly file.  Make them 8 chars wide.
 au BufRead,BufNewFile *.s set noexpandtab
@@ -44,9 +45,7 @@ set textwidth=80
 " https://coderwall.com/p/sdhfug/vim-swap-backup-and-undo-files
 " Keep backup files from polluting the project directory
 set undodir=~/.vim/.undo/
-
 set backupdir=~/.vim/.backup/
-
 set directory=~/.vim/.swp/
 
 " This is my prefered colorscheme, feel free to choose another colorscheme
@@ -55,15 +54,14 @@ set directory=~/.vim/.swp/
 " options).
 "hi SpecialKey ctermfg=LightGreen
 "hi NonText ctermfg=LightGreen
-" hi Comment ctermfg=Cyan
 
 " For switching between many opened file by using ctrl+l or ctrl+h
-map <C-J> :next <CR>
-map <C-K> :prev <CR>
+" map <C-J> :next <CR>
+" map <C-K> :prev <CR>
 
 " Spelling toggle via F10 and F11
-map <F10> <Esc>setlocal spell spelllang=en_us<CR>
-map <F11> <Esc>setlocal nospell<CR>
+" map <F10> <Esc>setlocal spell spelllang=en_us<CR>
+" map <F11> <Esc>setlocal nospell<CR>
 
 function! FileHeading()
           let s:line=line(".")
@@ -156,7 +154,7 @@ inoremap <C-j> <down>
 inoremap <C-k> <up>
 inoremap <C-l> <right>
 noremap <C-c> <Esc>:x<CR>
-noremap <C-c> <Esc>:x<CR>
+inoremap <C-c> <Esc>:x<CR>
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
@@ -217,8 +215,8 @@ set formatoptions+=c
 
 " Make spacing keys work in normal mode.
 nnoremap <Space> i<Space><Right><ESC>
-nnoremap <CR> i<CR><ESC>
-nnoremap <Tab> i<Tab><ESC>
+nnoremap <CR> i<CR><ESC>^
+nnoremap <Tab> i<Tab><ESC>l
 
 " Can increment/decrement letters
 set nrformats+=alpha
@@ -262,3 +260,30 @@ noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 "nmap  :w           <NOP>
 "nmap :x            <NOP>
+
+" Highlight the line the cursor is on.
+set cursorline
+hi CursorLine term=bold cterm=bold ctermbg=DarkBlue
+
+" Change the cursor line highlighting when leaving the current buffer.
+augroup cursorlinehighlighting
+	autocmd!
+	autocmd InsertLeave * hi CursorLine ctermbg=DarkBlue term=bold cterm=bold
+	autocmd InsertEnter  * hi CursorLine ctermbg=DarkBlue cterm=underline,bold term=underline,bold
+augroup END
+
+" Cool line number stuff
+"set number relativenumber
+"augroup numbertoggle
+"	autocmd!
+"	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+"	autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+"augroup END
+
+"set noruler
+set noshowmode
+"set laststatus=0
+
+" Case sensitive search by default only when capital letters are present
+set smartcase
+hi Comment ctermfg=Cyan
