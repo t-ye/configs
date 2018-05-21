@@ -10,3 +10,4 @@ scripts/
 .vim/colors
 .vim/templates
 .vim/plugin
+bin/
