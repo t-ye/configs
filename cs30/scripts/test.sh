@@ -12,9 +12,10 @@
 # set -e
 
 NUM_ARGS="$#"
-NUM_ARGS_NEEDED=4
+NUM_ARGS_NEEDED=5
 if [ $NUM_ARGS -ne $NUM_ARGS_NEEDED ]; then
-	echo 'Usage: '$(basename "$0")' <make-target> <solution> <driver> <argument-src-file>'
+	echo 'Usage: '$(basename "$0")' <make-target> <solution> <driver>
+	<argument-src-file> <inputs-file>'
 	exit 1
 fi
 
@@ -23,6 +24,7 @@ MAKE_TARGET="$1"
 SOLUTION="$2"
 DRIVER="$3"
 ARGUMENTS="$4"
+INPUT_FILE="$5"
 
 oldIFS=${IFS}
 IFS=" "
@@ -104,18 +106,21 @@ for type in ${!testcases[@]} ; do
 # stdout before 2>&1 will affect stderr, redircting stdout after will not.
 # &: run in background (allow next command to run)
 # wait: wait for background processes to finish
-	$SOLUTION $ARGS  > "$SOLUTION_OUT_FILE" \
+	$SOLUTION $ARGS  < "$INPUT_FILE"        \
+	                 > "$SOLUTION_OUT_FILE" \
 	                2> "$SOLUTION_ERR_FILE" &
-	$DRIVER   $ARGS  > "$DRIVER_OUT_FILE" \
+	$DRIVER   $ARGS  < "$INPUT_FILE"      \
+	                 > "$DRIVER_OUT_FILE" \
 	                2> "$DRIVER_ERR_FILE" &
 	wait
+
 
 
 
 # Command substitution: redirect output of command to script.
 
 	DIFF=0
-	STDOUT_DIFFS=$($SDIFF_DIFFS_ONLY "$SOLUTION_OUT_FILE" "$DRIVER_OUT_FILE" 2>&1)
+	STDOUT_DIFFS=$($SDIFF_DIFFS_ONLY "$SOLUTION_OUT_FILE" "$DRIVER_OUT_FILE")
 	# $SDIFF_DIFFS_ONLY "$SOLUTION_OUT_FILE" "$DRIVER_OUT_FILE"
 	if [[ $STDOUT_DIFFS ]]; then
 		# echo "$STDOUT_LABEL"
@@ -123,7 +128,8 @@ for type in ${!testcases[@]} ; do
 		DIFF=1
 	fi
 
-	STDERR_DIFFS=$($SDIFF_DIFFS_ONLY "$SOLUTION_ERR_FILE" "$DRIVER_ERR_FILE" 2>&1)
+	STDERR_DIFFS=$($SDIFF_DIFFS_ONLY "$SOLUTION_ERR_FILE" "$DRIVER_ERR_FILE"
+	2>&1 1>/dev/null)
 	if [[ $STDERR_DIFFS ]]; then
 		# echo "$STDERR_LABEL"
 		# echo "$STDERR_DIFFS"

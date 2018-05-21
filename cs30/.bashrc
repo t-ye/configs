@@ -84,13 +84,12 @@ if [ -a aliases ]; then
 	source aliases
 fi
 
-
 alias sshpi="ssh pi-cluster.ucsd.edu"
 export PATH=$PATH":~/bin"
 
-alias ls="ls --color=auto"
+alias ls="ls --color=auto --sort=extension --hide=*.o --group-directories-first"
 
-LS_COLORS=$LS_COLORS:'di=1;96:ln=4;96:ex=1;95:mi=1;31:*.c=93:*.s=92:*.h=91' ; export LS_COLORS
+LS_COLORS='di=1;96:ln=4;96:ex=1;95:mi=1;31:*.c=93:*.s=92:*.h=91' ; export LS_COLORS
 #LS_COLORS=$LS_COLORS:'di=1;34:ln=4;34:ex=1;35:mi=1;31:*.c=33:*.s=32:*.h=31' ; export LS_COLORS
 
 export PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;83m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;81m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;226m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
@@ -113,4 +112,6 @@ stty -ixon
 
 # Check C syntax.
 # -c: Don't require a main function.
-alias csyn='gcc -fsyntax-only -std=c99 -c'
+alias csyn='gcc -fsyntax-only -std=c99 -c -pedantic -Wall -Wfatal-errors'
+alias ctags='~/bin/ctags'
+alias grep='grep --no-messages'

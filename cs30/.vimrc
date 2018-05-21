@@ -191,11 +191,15 @@ hi Normal ctermbg=None
 hi NonText ctermbg=None ctermfg=gray
 hi VertSplit cterm=none ctermfg=red
 
+" Highlight settings for too-long lines.
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
 
 augroup vimrc_autocmds
 	autocmd!
-	autocmd BufEnter,WinEnter * call matchadd('OverLength', '\%>80v.\+', -1)
+	autocmd BufEnter,WinEnter *.s call matchadd('OverLength', '\%>80v.\+', -1)
+	autocmd BufEnter,WinEnter *.c call matchadd('OverLength', '\%>80v.\+', -1)
+	autocmd BufEnter,WinEnter *.h call matchadd('OverLength', '\%>80v.\+', -1)
+	autocmd BufEnter,WinEnter README call matchadd('OverLength', '\%>80v.\+', -1)
 augroup END
 
 " Multiline comments
@@ -287,3 +291,10 @@ set noshowmode
 " Case sensitive search by default only when capital letters are present
 set smartcase
 hi Comment ctermfg=Cyan
+
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-h> <C-W>h
+noremap <C-l> <C-W>l
+
+runtime! ftplugin/man.vim

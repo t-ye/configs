@@ -1,3 +1,5 @@
+# Milestone turnin script.
+
 if [[ $# -ne 1 ]] ; then
 	echo 'Usage: '$(basename "$0")' <pa-number>'
 	exit 1

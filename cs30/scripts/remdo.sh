@@ -3,7 +3,7 @@
 # is better furnished with commands.
 TODO=$1
 if [[ $HOSTNAME == ieng6* ]] ; then
-	$TODO
+	bash -c $TODO
 else
-	ssh "$IENG6" 'echo n ; '"$TODO"
+	ssh "$IENG6" 'echo n ; cd '"$PWD ; ""$TODO"
 fi
