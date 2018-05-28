@@ -77,6 +77,9 @@ errcho() { # echo to stderr
 }
 
 
+# OK, setup done. Time to do stuff...
+
+# Remove the file that stores diffs if it's already there.
 rm -f "$DIFFERENCES_FILE"
 
 echo "$START_COMPILE_MSG"

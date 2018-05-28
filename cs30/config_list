@@ -10,4 +10,8 @@ scripts/
 .vim/colors
 .vim/templates
 .vim/plugin
+.vim/.vimrc-formatting
+.vim/.vimrc-ui
+.vim/.vimrc-syntax
+.vim/.vimrc-mappings
 bin/

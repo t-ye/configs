@@ -11,12 +11,15 @@ if ! [[ $PA_NUM =~ ^[0-9]+$ ]] ; then
 fi
 
 URL="https://cseweb.ucsd.edu/~ricko/CSE30/pa${PA_NUM}.pdf"
-PDF_PATH="${INSTRUCTS_DIR}/pa${PA_NUM}.pdf"
+PDF_PATH="${INSTRUCTS_DIR}/pa${PA_NUM}.pdf" # INSTRUCTS_DIR needs to be set!
+
+
 
 echo -n "Downloading PDF... "
 wget --output-document="$PDF_PATH" --quiet "$URL"
 echo 'Done.'
 
+: '
 echo -n 'Converting to .txt... '
 remdo 'pdftotext -layout '"$PDF_PATH"
 echo 'Done. '
@@ -24,3 +27,4 @@ echo 'Done. '
 echo -n 'Removing PDF file... '
 rm "$PDF_PATH"
 echo 'Done.'
+'
