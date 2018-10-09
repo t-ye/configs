@@ -54,7 +54,7 @@ fi
 # alias tmuxr="tmux new-session -A -s main"
 
 alias tmux='tmux attach -d'
-export CURRENT_PA='3'
+export CURRENT_PA='4'
 if [[ $HOSTNAME != pi* ]]; then
 
 	if ! { [ "$TERM" = "screen" ] || [ -n "$TMUX" ]; } then
@@ -115,3 +115,19 @@ stty -ixon
 alias csyn='gcc -fsyntax-only -std=c99 -c -pedantic -Wall -Wfatal-errors'
 alias ctags='~/bin/ctags'
 alias grep='grep --no-messages'
+
+
+_foo()
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts="--help --verbose --version"
+
+    if [[ ${cur} == -* ]] ; then
+        COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+        return 0
+    fi
+}
+complete -F _foo foo
