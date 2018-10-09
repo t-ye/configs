@@ -4,13 +4,16 @@
 
 [alias]
 	# Force push
-	fpush = "!git add . && git commit -a --allow-empty-message -m '' && git push"
-	makerepo = "!~/scripts/makerepo.sh"
+	nomsgcommit = commit -a --allow-empty-message -m \"\"
+	fpush = !git add . && git nomsgcommit && git push
+	makerepo = !~/scripts/makerepo.sh
+	acp = !~/scripts/gitacp.sh
+	unstage = reset HEAD --
 [push]
 	# Allow push without explicit branch & remote
 	default = simple
 [core]
-	# Global gitignore
 	excludesfile = ~/.gitignore
+	editor=vim
 [github]
 	user = t-ye
