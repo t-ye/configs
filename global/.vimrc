@@ -26,6 +26,10 @@ set bg=light
 set nonu                        " no line numbers
 scriptencoding utf-8
 set encoding=utf-8
+
+set noexpandtab
+set shiftwidth=2
+set tabstop=2
 " Expand tabs in C files to spaces
 " au BufRead,BufNewFile *.{c,h,java} set expandtab
 au BufRead,BufNewFile *.{c,h,java} set expandtab
@@ -38,6 +42,7 @@ au BufRead,BufNewFile *.{c,h,java} set tabstop=2
 au BufRead,BufNewFile *.s set noexpandtab
 au BufRead,BufNewFile *.s set shiftwidth=8
 au BufRead,BufNewFile *.s set tabstop=8
+
 
 set textwidth=80
 
