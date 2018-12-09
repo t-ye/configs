@@ -1,0 +1,35 @@
+" For highlighting commands that may be filetype-specific.
+
+" Show syntax
+filetype plugin on
+syntax on
+set background=dark
+" set background=light
+colorscheme gruvbox
+hi PreProc ctermfg=Red
+" Change color of function labels.
+au BufRead,BufNewFile *.{sh} hi Function ctermfg=Green
+
+" Don't let vim give the background a different color.
+hi Normal ctermbg=None
+hi NonText ctermbg=None ctermfg=gray
+hi VertSplit cterm=none ctermfg=red
+
+" Highlight settings for too-long lines.
+highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
+
+augroup vimrc_autocmds
+	autocmd!
+	autocmd BufEnter,WinEnter *.s call matchadd('OverLength', '\%>80v.\+', -1)
+	autocmd BufEnter,WinEnter *.c call matchadd('OverLength', '\%>80v.\+', -1)
+	autocmd BufEnter,WinEnter *.h call matchadd('OverLength', '\%>80v.\+', -1)
+	autocmd BufEnter,WinEnter README call matchadd('OverLength', '\%>80v.\+', -1)
+augroup END
+
+hi Normal ctermfg=White
+
+" Make comments nice and bright
+hi Comment ctermfg=Cyan
+
+autocmd BufRead,BufNewFile *.py hi Conditional ctermfg=Green
+autocmd BufRead,BufNewFile *.py hi Statement ctermfg=Green

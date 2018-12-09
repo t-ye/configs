@@ -1,0 +1,70 @@
+" For commands that change the appearance of vim or the action of vim commands,
+" but not the presentation of text itself.
+
+set nonu			" line numbering on
+set noshowmode			" don't show mode in dedicated line
+" set showmode			" show the mode on the dedicated line
+" set ignorecase		" search without regards to case
+" set noerrorbells		" bye bye bells :)
+" set ruler			" which line am I on?
+set incsearch			" incremental searching
+set nohlsearch			" meh
+" set bs=2			" fix backspacing in insert mode
+set nonumber			" No line numbers
+" set showmatch			" ensure Dyck language
+" Case sensitive search by default only when capital letters are
+set ignorecase
+set smartcase " Case sensitive search by default only when capital letters are
+scriptencoding utf-8
+set encoding=utf-8
+
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+	\| exe "normal! g'\"" | endif
+endif
+
+" Automatically remove trailiing whitespace on exit
+autocmd VimLeave * %s/\s\+$//e
+
+" Highlight the line the cursor is on.
+set cursorline
+hi CursorLine term=bold cterm=bold ctermbg=DarkBlue
+
+" Change the cursor line highlighting when leaving the current buffer.
+augroup cursorlinehighlighting
+	autocmd!
+ 	autocmd InsertLeave * hi CursorLine ctermbg=DarkBlue term=bold cterm=bold
+"	autocmd InsertEnter  * hi CursorLine ctermbg=DarkBlue cterm=underline,bold term=underline,bold
+"	autocmd InsertEnter  * hi CursorLine cterm=reverse,underline,bold term=reverse,underline,bold
+augroup END
+
+
+
+" Scripts are sourced automatically.
+
+"nmap  :w           <NOP>
+"nmap :x            <NOP>
+" Cool line number stuff
+"set number relativenumber
+"augroup numbertoggle
+"	autocmd!
+"	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+"	autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+"augroup END
+
+"set noruler
+"set laststatus=0
+
+
+" Output the current syntax group
+" nnoremap <F12> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
+
+
+" hi StatusLine ctermfg=black ctermbg=white cterm=bold
+" hi StatusLineNC ctermfg=black ctermbg=white cterm=bold
+
+" hi StatusLine   ctermfg=red ctermbg=black cterm=bold gui=bold,italic
+" hi StatusLineNC ctermfg=grey ctermbg=black cterm=none gui=none
+

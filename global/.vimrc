@@ -4,35 +4,6 @@ set nocompatible		" get rid of strict vi compatibility!:q
 " set modeline			" File-specific vim directives
 set fileformats=unix,dos,mac	" open files from mac/dos
 set exrc			" open local config files
-set nojoinspaces		" don't add white space when I don't tell you to
-set ruler			" which line am I on?
-set showmatch			" ensure Dyck language
-set incsearch			" incremental searching
-set nohlsearch			" meh
-set bs=2			" fix backspacing in insert mode
-set bg=light
-set nonu                        " no line numbers
-scriptencoding utf-8
-set encoding=utf-8
-
-set noexpandtab
-set shiftwidth=2
-set tabstop=2
-" Expand tabs in C files to spaces
-" au BufRead,BufNewFile *.{c,h,java} set expandtab
-au BufRead,BufNewFile *.{c,h,java} set expandtab
-au BufRead,BufNewFile *.{c,h,java} set shiftwidth=2
-au BufRead,BufNewFile *.{c,h,java} set tabstop=2
-" au BufRead,BufNewFile *.{c,h,java} %retab!
-" args *.js | argdo retab
-
-" Do not expand tabs in assembly file.  Make them 8 chars wide.
-au BufRead,BufNewFile *.s set noexpandtab
-au BufRead,BufNewFile *.s set shiftwidth=8
-au BufRead,BufNewFile *.s set tabstop=8
-
-
-set textwidth=80
 filetype plugin on
 syntax on
 
@@ -43,6 +14,7 @@ set undofile
 set undodir=~/.vim/.undo/
 set backupdir=~/.vim/.backup/
 set directory=~/.vim/.swp/
+
 ":Man
 runtime! ftplugin/man.vim
 
