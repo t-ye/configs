@@ -62,6 +62,7 @@ rm --recursive --dir $CONFIG_ACCOUNT/home
 if [[ $HOSTNAME == pi* ]]; then
 	ssh ieng6.ucsd.edu "cd $SCRIPT_PATH; git fpush"
 else
-	remdo "cd ~/configs ; git fpush"
+	#remdo "cd ~/configs ; git fpush"
+	cd ~/configs ; git fpush
 fi
 
