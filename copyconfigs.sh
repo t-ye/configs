@@ -1,3 +1,4 @@
+# Copy config files to this git directory
 if [ $# != 1 ] ; then
 	echo "Usage: copyconfigs.sh <account name>"
 	exit 1
