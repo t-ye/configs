@@ -68,6 +68,26 @@ UseTabs = true
 
 FileStates [
 	[
+		FilePath = Z:\home\thurman\configs\chromebook\textbooks\154c.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = true
+		SidebarDx = 233
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
 		FilePath = Z:\home\thurman\ucsd-math\180b\7\main.pdf
 		Favorites [
 		]
@@ -77,7 +97,7 @@ FileStates [
 		UseDefaultState = false
 		DisplayMode = continuous
 		ScrollPos = -1 -1
-		PageNo = 6
+		PageNo = 8
 		Zoom = fit width
 		Rotation = 0
 		WindowState = 1
@@ -96,8 +116,8 @@ FileStates [
 		OpenCount = 1
 		UseDefaultState = false
 		DisplayMode = continuous
-		ScrollPos = -1 -1
-		PageNo = 1
+		ScrollPos = -1 342
+		PageNo = 6
 		Zoom = fit width
 		Rotation = 0
 		WindowState = 1
@@ -137,8 +157,8 @@ FileStates [
 		OpenCount = 4
 		UseDefaultState = false
 		DisplayMode = continuous
-		ScrollPos = -1 273
-		PageNo = 231
+		ScrollPos = -1 1552
+		PageNo = 247
 		Zoom = fit page
 		Rotation = 0
 		WindowState = 1
