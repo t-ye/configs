@@ -63,6 +63,6 @@ if [[ $HOSTNAME == pi* ]]; then
 	ssh ieng6.ucsd.edu "cd $SCRIPT_PATH; git fpush"
 else
 	#remdo "cd ~/configs ; git fpush"
-	cd ~/configs ; git fpush
+	cd ~/configs ; git push
 fi
 

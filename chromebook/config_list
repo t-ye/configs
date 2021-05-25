@@ -1,0 +1,9 @@
+autocommit.sh
+clip2tex.sh
+img2tex.py
+makescript.sh
+SumatraPDF-3.2-64.exe
+SumatraPDF-settings.txt
+textbooks/
+.vim/
+.bashrc

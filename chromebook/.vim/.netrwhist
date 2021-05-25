@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/thurman/ucsd-math/154/5/answers'
+let g:netrw_dirhist_2='/home/thurman/ucsd-math/200c/6/test'
+let g:netrw_dirhist_3='/home/thurman/ucsd-math/200c/6/test/ÿ-0-0'
+let g:netrw_dirhist_4='/home/thurman/ucsd-math/200c/6/test/ÿ-0-7'
+let g:netrw_dirhist_5='/home/thurman/ucsd-math/154/7/img'
+let g:netrw_dirhist_6='/home/thurman/ucsd-math/180b/8/answers'
