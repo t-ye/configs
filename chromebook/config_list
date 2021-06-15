@@ -12,3 +12,5 @@ textbooks/
 .vim/
 .bashrc
 install-tl-20210324/
+pkg_list
+texlive_pkg_list
