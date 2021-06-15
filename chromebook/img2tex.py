@@ -5,10 +5,13 @@ import requests
 import json
 import os
 
+# Usage : img2tex.py <png_source> <tex_destination>
 # CLIPBOARD
 
+PNG_EXT = '.png'
+
 # put desired file path here
-file_path = os.path.expanduser(sys.argv[2] if len(sys.argv) >= 3 else '~/clipboard.png')
+file_path = os.path.expanduser(sys.argv[1])
 image_uri = "data:image/png;base64," + base64.b64encode(open(file_path, "rb").read()).decode()
 args = {
     'src': image_uri,
@@ -25,7 +28,9 @@ r = requests.post("https://api.mathpix.com/v3/text",
 j = json.loads(r.text)
 
 
-with open(sys.argv[1], 'w') as f :
+outfile = sys.argv[2] if len(sys.argv) > 2 else file_path[:-len(PNG_EXT)] + '.tex'
+
+with open(outfile, 'w') as f :
     try :
         f.write(j['text'])
     except :

@@ -61,14 +61,54 @@ DefaultZoom = fit page
 WindowState = 1
 WindowPos = 476 -3 968 1067
 ShowToc = true
-SidebarDx = 233
+SidebarDx = 237
 TocDy = 0
 ShowStartPage = true
 UseTabs = true
 
 FileStates [
 	[
-		FilePath = Z:\home\thurman\configs\chromebook\textbooks\154c.pdf
+		FilePath = Z:\home\thurman\rtg\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 4
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 621
+		PageNo = 3
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\euler\writeup\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 3
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 144
+		PageNo = 3
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\textbooks\contfrac_rockett.djvu
 		Favorites [
 		]
 		IsPinned = false
@@ -82,13 +122,13 @@ FileStates [
 		Rotation = 0
 		WindowState = 1
 		WindowPos = 476 -3 968 1067
-		ShowToc = true
-		SidebarDx = 233
+		ShowToc = false
+		SidebarDx = 237
 		DisplayR2L = false
 		ReparseIdx = 0
 	]
 	[
-		FilePath = Z:\home\thurman\ucsd-math\180b\7\main.pdf
+		FilePath = Z:\home\thurman\textbooks\contfrac_khinchin.djvu
 		Favorites [
 		]
 		IsPinned = false
@@ -97,18 +137,18 @@ FileStates [
 		UseDefaultState = false
 		DisplayMode = continuous
 		ScrollPos = -1 -1
-		PageNo = 8
+		PageNo = 13
 		Zoom = fit width
 		Rotation = 0
 		WindowState = 1
 		WindowPos = 476 -3 968 1067
 		ShowToc = false
-		SidebarDx = 233
+		SidebarDx = 237
 		DisplayR2L = false
 		ReparseIdx = 0
 	]
 	[
-		FilePath = Z:\home\thurman\ucsd-math\180b\8\main.pdf
+		FilePath = Z:\home\thurman\euler\main.pdf
 		Favorites [
 		]
 		IsPinned = false
@@ -116,14 +156,256 @@ FileStates [
 		OpenCount = 1
 		UseDefaultState = false
 		DisplayMode = continuous
-		ScrollPos = -1 342
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\ucsd-math\154\review\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 2
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\ucsd-math\154\7\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 2
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\ucsd-math\154\6\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 4
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\ucsd-math\154\5\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\ucsd-math\154\3\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 2
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 3
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\ucsd-math\154\4\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 2
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 2
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = C:\users\thurman\My Documents\textbooks\180b.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 7
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 1138
+		PageNo = 248
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = true
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 7 8 10 19 25 32 36 39 48 51 56 59 64 69 73 77 78 81 87 93 94 99 103 107 146 147
+	]
+	[
+		FilePath = C:\users\thurman\My Documents\textbooks\154.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 3
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 143
+		PageNo = 70
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = true
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 11 20 28 37 48 55 65 79
+	]
+	[
+		FilePath = Z:\home\thurman\ucsd-math\154\2\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\ucsd-math\154\1\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 2
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = 9 -1
+		PageNo = 1
+		Zoom = 125
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\ucsd-math\180b\9\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
 		PageNo = 6
 		Zoom = fit width
 		Rotation = 0
 		WindowState = 1
 		WindowPos = 476 -3 968 1067
 		ShowToc = false
-		SidebarDx = 233
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\ucsd-math\180b\10\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 11
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
 		DisplayR2L = false
 		ReparseIdx = 0
 	]
@@ -136,61 +418,20 @@ FileStates [
 		OpenCount = 1
 		UseDefaultState = false
 		DisplayMode = continuous
-		ScrollPos = -1 130
-		PageNo = 144
+		ScrollPos = -1 -1
+		PageNo = 107
 		Zoom = fit page
 		Rotation = 0
 		WindowState = 1
 		WindowPos = 476 -3 968 1067
 		ShowToc = true
-		SidebarDx = 233
+		SidebarDx = 237
 		DisplayR2L = false
 		ReparseIdx = 0
-		TocState = 4 12 20 28 37 42 49 54 62
+		TocState = 4 12 20 28 37 42 49 54 62 69
 	]
 	[
-		FilePath = C:\users\thurman\My Documents\textbooks\180b.pdf
-		Favorites [
-		]
-		IsPinned = false
-		IsMissing = false
-		OpenCount = 4
-		UseDefaultState = false
-		DisplayMode = continuous
-		ScrollPos = -1 1552
-		PageNo = 247
-		Zoom = fit page
-		Rotation = 0
-		WindowState = 1
-		WindowPos = 476 -3 968 1067
-		ShowToc = true
-		SidebarDx = 233
-		DisplayR2L = false
-		ReparseIdx = 0
-		TocState = 7 8 10 19 25 32 36 39 48 51 56 59 64 69 73 77 78 81 87 93 94 99
-	]
-	[
-		FilePath = Z:\home\thurman\ucsd-math\154\7\main.pdf
-		Favorites [
-		]
-		IsPinned = false
-		IsMissing = false
-		OpenCount = 1
-		UseDefaultState = false
-		DisplayMode = continuous
-		ScrollPos = -1 695
-		PageNo = 3
-		Zoom = fit width
-		Rotation = 0
-		WindowState = 1
-		WindowPos = 476 -3 968 1067
-		ShowToc = false
-		SidebarDx = 233
-		DisplayR2L = false
-		ReparseIdx = 0
-	]
-	[
-		FilePath = C:\users\thurman\My Documents\textbooks\154.pdf
+		FilePath = Z:\home\thurman\ucsd-math\180b\8\main.pdf
 		Favorites [
 		]
 		IsPinned = false
@@ -198,20 +439,140 @@ FileStates [
 		OpenCount = 2
 		UseDefaultState = false
 		DisplayMode = continuous
-		ScrollPos = -1 760
-		PageNo = 112
-		Zoom = fit page
+		ScrollPos = -1 -1
+		PageNo = 7
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\ucsd-math\180b\7\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 2
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 113
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\ucsd-math\180b\3\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 144
+		PageNo = 6
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\ucsd-math\180b\2\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 30
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\ucsd-math\180b\1\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 66
+		PageNo = 5
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\ucsd-math\200c\6\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 9
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = C:\users\thurman\My Documents\textbooks\atiyah.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 11
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = 15 411
+		PageNo = 103
+		Zoom = 125
 		Rotation = 0
 		WindowState = 1
 		WindowPos = 476 -3 968 1067
 		ShowToc = true
-		SidebarDx = 233
+		SidebarDx = 237
 		DisplayR2L = false
 		ReparseIdx = 0
-		TocState = 11 20 28 37 48 55 65 79
+		TocState = 4 13 26 30 32 38 40 43 45 50 56
 	]
 	[
-		FilePath = Z:\home\thurman\ucsd-math\180b\6\main.pdf
+		FilePath = Z:\home\thurman\ucsd-math\180b\4\main.pdf
 		Favorites [
 		]
 		IsPinned = false
@@ -226,7 +587,7 @@ FileStates [
 		WindowState = 1
 		WindowPos = 476 -3 968 1067
 		ShowToc = false
-		SidebarDx = 233
+		SidebarDx = 237
 		DisplayR2L = false
 		ReparseIdx = 0
 	]
@@ -239,94 +600,54 @@ FileStates [
 		OpenCount = 0
 		UseDefaultState = false
 		DisplayMode = continuous
-		ScrollPos = -1 663
+		ScrollPos = -1 -1
 		PageNo = 10
 		Zoom = fit width
 		Rotation = 0
 		WindowState = 1
 		WindowPos = 476 -3 968 1067
 		ShowToc = false
-		SidebarDx = 233
+		SidebarDx = 237
 		DisplayR2L = false
 		ReparseIdx = 0
 	]
 	[
-		FilePath = Z:\home\thurman\ucsd-math\180b\4\main.pdf
+		FilePath = Z:\home\thurman\ucsd-math\180b\6\main.pdf
 		Favorites [
 		]
 		IsPinned = false
 		IsMissing = false
-		OpenCount = 0
+		OpenCount = 2
 		UseDefaultState = false
 		DisplayMode = continuous
-		ScrollPos = -1 718
-		PageNo = 3
+		ScrollPos = -1 26
+		PageNo = 9
 		Zoom = fit width
 		Rotation = 0
 		WindowState = 1
 		WindowPos = 476 -3 968 1067
 		ShowToc = false
-		SidebarDx = 233
+		SidebarDx = 237
 		DisplayR2L = false
 		ReparseIdx = 0
 	]
 	[
-		FilePath = C:\users\thurman\My Documents\textbooks\szamuely.pdf
+		FilePath = Z:\home\thurman\ucsd-math\200c\8\main.pdf
 		Favorites [
 		]
 		IsPinned = false
 		IsMissing = false
-		OpenCount = 1
+		OpenCount = 3
 		UseDefaultState = false
 		DisplayMode = continuous
-		ScrollPos = -1 579
-		PageNo = 71
+		ScrollPos = -1 50
+		PageNo = 10
 		Zoom = fit width
 		Rotation = 0
 		WindowState = 1
 		WindowPos = 476 -3 968 1067
 		ShowToc = false
-		SidebarDx = 233
-		DisplayR2L = false
-		ReparseIdx = 0
-	]
-	[
-		FilePath = Z:\home\thurman\ucsd-math\154\5\main.pdf
-		Favorites [
-		]
-		IsPinned = false
-		IsMissing = false
-		OpenCount = 0
-		UseDefaultState = false
-		DisplayMode = continuous
-		ScrollPos = -1 -1
-		PageNo = 3
-		Zoom = fit width
-		Rotation = 0
-		WindowState = 1
-		WindowPos = 476 -3 968 1067
-		ShowToc = false
-		SidebarDx = 304
-		DisplayR2L = false
-		ReparseIdx = 0
-	]
-	[
-		FilePath = Z:\home\thurman\ucsd-math\154\6\main.pdf
-		Favorites [
-		]
-		IsPinned = false
-		IsMissing = false
-		OpenCount = 0
-		UseDefaultState = false
-		DisplayMode = continuous
-		ScrollPos = -1 -1
-		PageNo = 1
-		Zoom = fit width
-		Rotation = 0
-		WindowState = 1
-		WindowPos = 476 -3 968 1067
-		ShowToc = false
-		SidebarDx = 233
+		SidebarDx = 237
 		DisplayR2L = false
 		ReparseIdx = 0
 	]
@@ -336,41 +657,123 @@ FileStates [
 		]
 		IsPinned = false
 		IsMissing = false
-		OpenCount = 1
+		OpenCount = 2
 		UseDefaultState = false
 		DisplayMode = continuous
-		ScrollPos = 57 -1
+		ScrollPos = 69 162
 		PageNo = 622
 		Zoom = 100
 		Rotation = 0
 		WindowState = 1
 		WindowPos = 476 -3 968 1067
 		ShowToc = true
-		SidebarDx = 304
+		SidebarDx = 237
 		DisplayR2L = false
 		ReparseIdx = 0
 		TocState = 1 6 7 15 23 44 58 75 92 106 124 151 159 164 165 171 187 192
 	]
 	[
-		FilePath = C:\users\thurman\My Documents\textbooks\atiyah.pdf
+		FilePath = C:\users\thurman\My Documents\textbooks\isaacs.djvu
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 267
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = true
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 19
+	]
+	[
+		FilePath = C:\users\thurman\My Documents\textbooks\szamuely.pdf
 		Favorites [
 		]
 		IsPinned = false
 		IsMissing = false
 		OpenCount = 3
 		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 43
+		PageNo = 48
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\ucsd-math\200c\7\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 2
+		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 50
+		PageNo = 5
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\thurman\200c\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
 		DisplayMode = continuous
-		ScrollPos = 43 632
-		PageNo = 52
-		Zoom = 125
+		ScrollPos = -1 164
+		PageNo = 80
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		ShowToc = false
+		SidebarDx = 233
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 1 3 24 32 37 42
+	]
+	[
+		FilePath = Z:\home\thurman\configs\chromebook\textbooks\154c.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 312
+		PageNo = 57
+		Zoom = fit page
 		Rotation = 0
 		WindowState = 1
 		WindowPos = 476 -3 968 1067
 		ShowToc = true
-		SidebarDx = 304
+		SidebarDx = 233
 		DisplayR2L = false
 		ReparseIdx = 0
-		TocState = 4 13 26 30 32 40 43 45 50 56
+		TocState = 2 11 20 28 37 48 55
 	]
 	[
 		FilePath = Z:\home\thurman\clipboard.png
@@ -378,7 +781,7 @@ FileStates [
 		]
 		IsPinned = false
 		IsMissing = false
-		OpenCount = 2
+		OpenCount = 0
 		UseDefaultState = false
 		DisplayMode = single page
 		ScrollPos = 0 -1
@@ -513,26 +916,6 @@ FileStates [
 		ReparseIdx = 0
 	]
 	[
-		FilePath = Z:\home\thurman\ucsd-math\154\4\main.pdf
-		Favorites [
-		]
-		IsPinned = false
-		IsMissing = false
-		OpenCount = 0
-		UseDefaultState = false
-		DisplayMode = continuous
-		ScrollPos = -1 73
-		PageNo = 4
-		Zoom = fit width
-		Rotation = 0
-		WindowState = 1
-		WindowPos = 476 -3 968 1067
-		ShowToc = false
-		SidebarDx = 302
-		DisplayR2L = false
-		ReparseIdx = 0
-	]
-	[
 		FilePath = Z:\home\thurman\Downloads\hw4 (1).pdf
 		Favorites [
 		]
@@ -622,26 +1005,6 @@ FileStates [
 		UseDefaultState = false
 		DisplayMode = continuous
 		ScrollPos = -1 93
-		PageNo = 1
-		Zoom = fit width
-		Rotation = 0
-		WindowState = 1
-		WindowPos = 476 -3 968 1067
-		ShowToc = false
-		SidebarDx = 215
-		DisplayR2L = false
-		ReparseIdx = 0
-	]
-	[
-		FilePath = Z:\home\thurman\ucsd-math\154\3\main.pdf
-		Favorites [
-		]
-		IsPinned = false
-		IsMissing = false
-		OpenCount = 0
-		UseDefaultState = false
-		DisplayMode = continuous
-		ScrollPos = -1 87
 		PageNo = 1
 		Zoom = fit width
 		Rotation = 0
@@ -773,46 +1136,6 @@ FileStates [
 		ReparseIdx = 0
 	]
 	[
-		FilePath = Z:\home\thurman\ucsd-math\154\1\main.pdf
-		Favorites [
-		]
-		IsPinned = false
-		IsMissing = false
-		OpenCount = 0
-		UseDefaultState = false
-		DisplayMode = continuous
-		ScrollPos = 48 704
-		PageNo = 4
-		Zoom = 125
-		Rotation = 0
-		WindowState = 1
-		WindowPos = 476 -3 968 1067
-		ShowToc = false
-		SidebarDx = 215
-		DisplayR2L = false
-		ReparseIdx = 0
-	]
-	[
-		FilePath = Z:\home\thurman\ucsd-math\154\2\main.pdf
-		Favorites [
-		]
-		IsPinned = false
-		IsMissing = false
-		OpenCount = 0
-		UseDefaultState = false
-		DisplayMode = continuous
-		ScrollPos = -1 578
-		PageNo = 2
-		Zoom = fit width
-		Rotation = 0
-		WindowState = 1
-		WindowPos = 476 -3 968 1067
-		ShowToc = false
-		SidebarDx = 215
-		DisplayR2L = false
-		ReparseIdx = 0
-	]
-	[
 		FilePath = Z:\home\thurman\textbooks\szamuely.pdf
 		Favorites [
 		]
@@ -852,46 +1175,6 @@ FileStates [
 		DisplayR2L = false
 		ReparseIdx = 0
 		TocState = 1 6 7 44 164
-	]
-	[
-		FilePath = Z:\home\thurman\ucsd-math\180b\1\main.pdf
-		Favorites [
-		]
-		IsPinned = false
-		IsMissing = false
-		OpenCount = 0
-		UseDefaultState = false
-		DisplayMode = continuous
-		ScrollPos = -1 66
-		PageNo = 5
-		Zoom = fit width
-		Rotation = 0
-		WindowState = 1
-		WindowPos = 476 -3 968 1067
-		ShowToc = false
-		SidebarDx = 215
-		DisplayR2L = false
-		ReparseIdx = 0
-	]
-	[
-		FilePath = Z:\home\thurman\ucsd-math\180b\2\main.pdf
-		Favorites [
-		]
-		IsPinned = false
-		IsMissing = false
-		OpenCount = 0
-		UseDefaultState = false
-		DisplayMode = continuous
-		ScrollPos = -1 113
-		PageNo = 9
-		Zoom = fit width
-		Rotation = 0
-		WindowState = 1
-		WindowPos = 476 -3 968 1067
-		ShowToc = false
-		SidebarDx = 215
-		DisplayR2L = false
-		ReparseIdx = 0
 	]
 	[
 		FilePath = Z:\home\thurman\textbooks\154.pdf
@@ -997,47 +1280,6 @@ FileStates [
 		TocState = 4 12 20 42 69
 	]
 	[
-		FilePath = Z:\home\thurman\200c\main.pdf
-		Favorites [
-		]
-		IsPinned = false
-		IsMissing = true
-		OpenCount = 0
-		UseDefaultState = false
-		DisplayMode = continuous
-		ScrollPos = -1 40
-		PageNo = 2
-		Zoom = fit width
-		Rotation = 0
-		WindowState = 1
-		WindowPos = 476 -3 968 1067
-		ShowToc = false
-		SidebarDx = 304
-		DisplayR2L = false
-		ReparseIdx = 0
-		TocState = 1 3
-	]
-	[
-		FilePath = Z:\home\thurman\ucsd-math\180b\3\main.pdf
-		Favorites [
-		]
-		IsPinned = false
-		IsMissing = true
-		OpenCount = 0
-		UseDefaultState = false
-		DisplayMode = continuous
-		ScrollPos = -1 -1
-		PageNo = 1
-		Zoom = fit width
-		Rotation = 0
-		WindowState = 1
-		WindowPos = 476 -3 968 1067
-		ShowToc = false
-		SidebarDx = 304
-		DisplayR2L = false
-		ReparseIdx = 0
-	]
-	[
 		FilePath = Z:\home\thurman\ucsd-math\200c\6\main2.pdf
 		Favorites [
 		]
@@ -1049,26 +1291,6 @@ FileStates [
 		ScrollPos = -1 -1
 		PageNo = 5
 		Zoom = fit page
-		Rotation = 0
-		WindowState = 1
-		WindowPos = 476 -3 968 1067
-		ShowToc = false
-		SidebarDx = 304
-		DisplayR2L = false
-		ReparseIdx = 0
-	]
-	[
-		FilePath = Z:\home\thurman\ucsd-math\200c\6\main.pdf
-		Favorites [
-		]
-		IsPinned = false
-		IsMissing = true
-		OpenCount = 0
-		UseDefaultState = false
-		DisplayMode = continuous
-		ScrollPos = -1 -1
-		PageNo = 6
-		Zoom = fit width
 		Rotation = 0
 		WindowState = 1
 		WindowPos = 476 -3 968 1067
@@ -1121,6 +1343,6 @@ FileStates [
 SessionData [
 ]
 TimeOfLastUpdateCheck = 0 0
-OpenCountWeek = 542
+OpenCountWeek = 544
 
 # Settings after this line have not been recognized by the current version

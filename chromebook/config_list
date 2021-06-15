@@ -1,7 +1,11 @@
 autocommit.sh
 clip2tex.sh
 img2tex.py
+imgs2tex.py
 makescript.sh
+mvprob.sh
+pdfcompress.sh
+vimprob.sh
 SumatraPDF-3.2-64.exe
 SumatraPDF-settings.txt
 textbooks/

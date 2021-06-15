@@ -118,3 +118,4 @@ alias sumatra="wine ~/SumatraPDF-3.2-64.exe"
 export WINEDEBUG=-all
 alias clipimg="xclip -selection clipboard -t image/png -o"
 alias pip3.7="python3.7 -m pip"
+alias fsize="du -sh * | sort -hr"
