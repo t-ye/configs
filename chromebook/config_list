@@ -14,3 +14,6 @@ textbooks/
 install-tl-20210324/
 pkg_list
 texlive_pkg_list
+get-pip.py
+pkg_list_aptmarkmanual
+pkg_list_manual

@@ -1341,6 +1341,50 @@ FileStates [
 	]
 ]
 SessionData [
+	[
+		TabStates [
+			[
+				FilePath = Z:\home\thurman\textbooks\contfrac_khinchin.djvu
+				DisplayMode = continuous
+				PageNo = 13
+				Zoom = fit width
+				Rotation = 0
+				ScrollPos = -1 -1
+				ShowToc = false
+			]
+			[
+				FilePath = Z:\home\thurman\textbooks\contfrac_rockett.djvu
+				DisplayMode = continuous
+				PageNo = 1
+				Zoom = fit page
+				Rotation = 0
+				ScrollPos = -1 -1
+				ShowToc = false
+			]
+			[
+				FilePath = Z:\home\thurman\euler\writeup\main.pdf
+				DisplayMode = continuous
+				PageNo = 3
+				Zoom = fit width
+				Rotation = 0
+				ScrollPos = -1 144
+				ShowToc = false
+			]
+			[
+				FilePath = Z:\home\thurman\rtg\main.pdf
+				DisplayMode = continuous
+				PageNo = 3
+				Zoom = fit width
+				Rotation = 0
+				ScrollPos = -1 621
+				ShowToc = false
+			]
+		]
+		TabIndex = 4
+		WindowState = 1
+		WindowPos = 476 -3 968 1067
+		SidebarDx = 237
+	]
 ]
 TimeOfLastUpdateCheck = 0 0
 OpenCountWeek = 544
