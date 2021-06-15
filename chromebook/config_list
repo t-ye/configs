@@ -11,7 +11,7 @@ SumatraPDF-settings.txt
 textbooks/
 .vim/
 .bashrc
-install-tl-20210324/
+install-tl-20210614/
 pkg_list
 texlive_pkg_list
 get-pip.py

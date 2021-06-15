@@ -112,10 +112,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-PATH="$PATH:/usr/local/texlive/2020/bin/x86_64-linux/"
-PATH="$PATH:/home/thurman/.local/bin"
-alias sumatra="wine ~/SumatraPDF-3.2-64.exe"
-export WINEDEBUG=-all
-alias clipimg="xclip -selection clipboard -t image/png -o"
-alias pip3.7="python3.7 -m pip"
-alias fsize="du -sh * | sort -hr"
+PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
